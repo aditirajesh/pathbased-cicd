@@ -29,7 +29,7 @@
   
 -  Create a folder .github/workflows in your project folder. This is where your github pipelines will exist. 
 - Make sure to structure your folder to follow the principle of separation of concerns as much as possible. Here is a sample for the same:
-  ![[images/Pasted image 20260209151917.png]]
+  ![Pipeline Diagram](images/20260209151917.png)
 
 ### Step 2: Write scripts in each folder
 - Create a sample script in each folder to run
@@ -87,24 +87,24 @@
 ### Case 1: Changes to code and terraform 
 - Both jobs get triggered and executed. 
 - Terraform artifact gets produced during runtime.
-- ![[images/Pasted image 20260209154227.png]]
+- ![Pipeline Diagram] (images/20260209154227.png)
 
 ### Case 2: Changes to code, not terraform
 - Only ***build_and_deploy_code*** job gets executed
 - No terraform artifact produced 
-- ![[images/Pasted image 20260209154432.png]]
+- ![Pipeline Diagram] (images/20260209154432.png)
 
 ### Case 3: Changes to terraform, not code: No if condition
 - All jobs run
 - Terraform artifact produced
 - No 'if' condition specified under ***build_and_deploy_code*** : all jobs will run when code changes to terraform is present. This is a default which always builds any code changes. This only prevents any unnecessary infra apply:
-- ![[images/Pasted image 20260209155309.png]]
+- ![Pipeline Diagram] (images/20260209155309.png)
 
 ### Case 4: Changes to terraform, not code: If condition 
 - Only ***terraform_plan and terraform_apply*** jobs run 
 - Terraform artifact produced
 - In this case ***build_and_deploy_code*** job gets skipped and does NOT run. 
-- ![[images/Pasted image 20260209155727.png]]
+- ![Pipeline Diagram] (images/20260209155727.png)
 
 
   
