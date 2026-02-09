@@ -11,7 +11,7 @@ provider "null" {}
 
 resource "null_resource" "test" {
   provisioner "local-exec" {
-    command = "echo Terraform ran at $(date). Change to this file to trigger terraform workflow"
+    command = "echo Terraform ran at $(date). New trigger!"
   }
 }
 
