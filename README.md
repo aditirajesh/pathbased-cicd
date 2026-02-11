@@ -120,5 +120,6 @@
 - In this case ***build_and_deploy_code*** job gets skipped and does NOT run. 
 - ![Pipeline Diagram](images/20260209155727.png)
 
-
+## **New Edits:**
+- Two new pipelines have been added as a part of cross-repository pipeline workflow (refer https://github.com/aditirajesh/deployment-repo)
   

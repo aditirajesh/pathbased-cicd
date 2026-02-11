@@ -1,0 +1,23 @@
+name: Notify Repo B (sha + before)
+
+on:
+  push:
+    branches: [ main, develop ]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send dispatch to Repo B
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.DEPLOYMENT_REPO}}
+          repository: aditirajesh/deployment-repo
+          event-type: repo-a-change
+          client-payload: |
+            {
+              "source_repo": "${{ github.repository }}",
+              "ref": "${{ github.ref }}",
+              "sha": "${{ github.sha }}",
+              "before": "${{ github.event.before }}"
+            }
