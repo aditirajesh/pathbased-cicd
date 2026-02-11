@@ -11,7 +11,7 @@ provider "null" {}
 
 resource "null_resource" "test" {
   provisioner "local-exec" {
-    command = "echo Terraform ran at $(date). Edit to test out cross-repo workflow"
+    command = "echo Terraform ran at $(date). Edit to test out cross-repo workflow. Change number 2"
   }
 }
 
