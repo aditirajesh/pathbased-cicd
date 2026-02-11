@@ -1,3 +1,5 @@
+# Path-Based Pipelines using GitHub Actions
+
 ## **Definition**
 
 - Path-based CICD/ selective pipelines only runs part of the pipeline that is affected by code changes rather than re-running the entire pipeline from scratch. 
