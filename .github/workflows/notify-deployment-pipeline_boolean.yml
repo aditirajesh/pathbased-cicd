@@ -1,4 +1,4 @@
-name: Notify pipeline repo
+name: Notify Repo B (using boolean)
 
 on:
   push:

@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "Database script executed. This has been changed!"
+echo "Database script executed. Edit to test out cross-repo workflow"
 date
